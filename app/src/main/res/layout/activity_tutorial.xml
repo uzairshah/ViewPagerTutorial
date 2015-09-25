@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".TutorialActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/titles"
+        android:padding="10dip"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="41dp"
+        app:radius="5dp"
+        app:fillColor="#c89de6"
+        app:pageColor="#ffffff"
+        app:strokeColor="#c89de6"
+        app:strokeWidth="0dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|end"
+        android:text="SKIP >"
+        android:layout_marginBottom="45dp"
+        android:textSize="20sp"
+        android:background="@null"
+        android:fontFamily=""
+        android:onClick="skipTutorial"
+        android:layout_above="@+id/titles"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffff"
+        android:textAlignment="textEnd"
+        android:id="@+id/btn_skip" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|end"
+        android:text="Lets Start!"
+        android:layout_marginBottom="45dp"
+        android:textSize="20sp"
+        android:background="@null"
+        android:fontFamily=""
+        android:onClick="finishTutorial"
+        android:layout_above="@+id/titles"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:textColor="#ffffff"
+        android:textAlignment="textEnd"
+        android:id="@+id/btn_finish"
+        android:visibility="invisible"/>
+</RelativeLayout>
